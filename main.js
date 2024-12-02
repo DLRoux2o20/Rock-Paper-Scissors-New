@@ -20,8 +20,8 @@ function getComputerChoice() {
 let computerChoice = getComputerChoice();
 
 function game() {
-    for (i = 0; i < 5; i++) {
-        playRound();
+    for (let i = 0; i < 5; i++) {
+         playRound();
         function playRound(playerSelection, computerSelection) {
     computerChoice = getComputerChoice();
     let playerText = prompt("What is your choice?");
@@ -87,9 +87,17 @@ function game() {
     } else {
         alert("Please enter choice");
     }
-
-}
     }
 }
 
-game();
+    if (playerScore > computerScore) {
+        console.log("Congratulations! You won!");
+    } else if (computerScore > playerScore) {
+        console.log("You lost! Better luck next time!");
+    } else {
+        console.log("It ended in a draw!");
+    }
+
+}
+
+game();    
