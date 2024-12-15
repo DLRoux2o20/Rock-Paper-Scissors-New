@@ -33,8 +33,43 @@ main {
 
 .scoreCounter {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 16px;
     font-size: 50px;
+}
+
+.buttonChoice {
+    color: white;
+    font-size: 2rem;
+}
+
+.choice {
+    display: inline-block;
+    font-size: 4rem;
+}
+
+.container {
+    height: 18%;
+}
+
+#container1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#choiceContainer {
+    height: 64%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+}
+
+#choice1 {
+    margin-right: 7.5rem;
+}
+
+#choice2 {
+    margin-left: 7.5rem;
 }
 
 #pScoreCounter {
@@ -50,6 +85,12 @@ main {
 #computerScore {
     float: right;
     margin-inline: 0 30px;
+}
+
+#roundResults {
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 20px;
 }
 
 #section1 {
