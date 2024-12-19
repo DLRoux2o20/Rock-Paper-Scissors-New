@@ -19,12 +19,15 @@ function getComputerChoice() {
 
     if (a === 0) {
         choice2.textContent = "Rock";
+        choice2.style.marginRight = "678.078px"
         return "Rock";
     } else if (a === 1) {
         choice2.textContent = "Paper";
+        choice2.style.marginRight = "662.292px";
         return "Paper";
     }
     choice2.textContent = "Scissors";
+    choice2.style.marginRight = "604.108px";
     return "Scissors"; 
 }
 
@@ -86,11 +89,17 @@ let playerSelection = "";
         let playAgain = document.createElement("span");
         document.body.appendChild(playAgain);
         playAgain.textContent = "Play Again";
-        playAgain.style.cssText = "color: white; position: absolute; bottom: 30vh; right: 45vw;";
+        playAgain.style.cssText = "color: white; position: absolute; bottom: 30vh; right: 45vw;  cursor: grab";
         playAgain.style.fontSize = "50px";
         playAgain.style.zIndex = "1";
 
         playAgain.addEventListener("click", function() {
+            choice1.style.color = "white";
+            choice2.style.color = "white";
+            choice1.textContent = "Rock";
+            choice2.textContent = "Rock";
+            choice1.style.marginLeft = "auto";
+            choice2.style.marginRight = "auto";
             endScreen.remove();
             gameResults.remove();
             playerScore = 0;
@@ -98,8 +107,6 @@ let playerSelection = "";
             playerScreenScore.textContent = "0";
             computerScreenScore.textContent = "0";
             roundResults.textContent = "";
-            choice1.textContent = "";
-            choice2.textContent = "";
             playAgain.remove();
         });
     } else if (computerScore === 5) {
@@ -119,11 +126,17 @@ let playerSelection = "";
         let playAgain = document.createElement("span");
         document.body.appendChild(playAgain);
         playAgain.textContent = "Play Again";
-        playAgain.style.cssText = "color: white; position: absolute; bottom: 30vh; right: 45vw;";
+        playAgain.style.cssText = "color: white; position: absolute; bottom: 30vh; right: 45vw; cursor: grab";
         playAgain.style.fontSize = "50px";
         playAgain.style.zIndex = "1";
 
         playAgain.addEventListener("click", function() {
+            choice1.style.color = "white";
+            choice2.style.color = "white";
+            choice1.textContent = "Rock";
+            choice2.textContent = "Rock";
+            choice1.style.marginLeft = "auto";
+            choice2.style.marginRight = "auto";
             endScreen.remove();
             gameResults.remove();
             playerScore = 0;
@@ -131,27 +144,34 @@ let playerSelection = "";
             playerScreenScore.textContent = "0";
             computerScreenScore.textContent = "0";
             roundResults.textContent = "";
-            choice1.textContent = "";
-            choice2.textContent = "";
             playAgain.remove();
         });
     }
         }
 
 btnRock.addEventListener("click", function() {
+    choice1.style.color = "black";
+    choice2.style.color = "black";
     playerSelection = "Rock";
     choice1.textContent = "Rock";
+    choice1.style.marginLeft = "672.812px";
     playRound();
 });
 
 btnPaper.addEventListener("click", function() {
+    choice1.style.color = "black";
+    choice2.style.color = "black";
     playerSelection = "Paper";
     choice1.textContent = "Paper";
+    choice1.style.marginLeft = "662.292px";
     playRound();
 });
 
 btnScissors.addEventListener("click", function() {
+    choice1.style.color = "black";
+    choice2.style.color = "black";
     playerSelection = "Scissors";
     choice1.textContent = "Scissors";
+    choice1.style.marginLeft = "598.842px";
     playRound();
 });

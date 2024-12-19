@@ -14,14 +14,11 @@ main {
     justify-content: space-evenly;
 }
 
-.btn {
-    width: 14vw;
-    height: 12vh;
-    border: 0;
-    background-color: rgb(71, 134, 237);
-    border-radius: 7px;
-    margin-top: 20px;
-}
+/* .flexMiddle {
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 7.5rem;
+} */
 
 .score {
     text-align: left;
@@ -44,11 +41,43 @@ main {
 
 .choice {
     display: inline-block;
-    font-size: 4rem;
+    font-size: 3.3vw;
 }
 
 .container {
     height: 18%;
+}
+
+.btnRim {
+    width: 14vw;
+    height: 12vh;
+    border: 0;
+    background-color: #fd6a16;
+    border-radius: 7px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.btn {
+    width: 14vw;
+    height: 12vh;
+    border: 0;
+    background-color: rgb(71, 134, 237);
+    border-radius: 7px;
+    position: absolute;
+    border: 0px solid #fd6a16;
+    cursor: grab;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+    transition-delay: 0ms;
+}
+
+.btn:hover {
+    border-width: 10px;
 }
 
 #container1 {
@@ -66,10 +95,14 @@ main {
 
 #choice1 {
     margin-right: 7.5rem;
+    margin-left: auto;
+    color: white;
 }
 
 #choice2 {
     margin-left: 7.5rem;
+    margin-right: auto;
+    color: white;
 }
 
 #pScoreCounter {
