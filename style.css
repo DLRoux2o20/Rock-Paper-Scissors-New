@@ -14,12 +14,6 @@ main {
     justify-content: space-evenly;
 }
 
-/* .flexMiddle {
-    display: flex;
-    justify-content: space-evenly;
-    column-gap: 7.5rem;
-} */
-
 .score {
     text-align: left;
     font-size: 50px;
